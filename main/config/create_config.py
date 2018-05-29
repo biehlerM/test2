@@ -13,7 +13,7 @@ def squeezeDet_config(name):
     cfg = edict()
 
     #we only care about these, others are omiited
-    cfg.CLASS_NAMES = ['cyclist', 'pedestrian', 'car']
+    cfg.CLASS_NAMES = ['car-key']
 
     # number of categories to classify
     cfg.CLASSES = len(cfg.CLASS_NAMES)
@@ -38,8 +38,8 @@ def squeezeDet_config(name):
     cfg.N_CHANNELS            = 3
 
     #batch sizes
-    cfg.BATCH_SIZE            = 4
-    cfg.VISUALIZATION_BATCH_SIZE = 16
+    cfg.BATCH_SIZE            = 1
+    cfg.VISUALIZATION_BATCH_SIZE = 1
 
     #SGD + Momentum parameters
     cfg.WEIGHT_DECAY          = 0.001
